@@ -21,7 +21,7 @@ const Home = () => {
           
           
           <motion.div 
-            className="text-white mt-52 pl-4"
+            className="text-white font-roboto mt-52 pl-4"
             initial={{ opacity: 0, translateY: -100 }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{
@@ -31,7 +31,7 @@ const Home = () => {
               bounce: 0.6
             }}
           >
-              <h1 className="text-7xl font-serif underline leading-tight">Seja <br />Bem-vindo!</h1>
+              <h1 className="text-7xl underline leading-tight">Seja <br />Bem-vindo!</h1>
               <p className="pt-8 text-[#c4b394] text-lg">Vamos embarcar nessa aventura e <br />explorar esse mundo fantástico!</p>
           </motion.div>
           <span className="border-2 border-[#c4b599] w-[50px] ml-4 mt-12"></span>
