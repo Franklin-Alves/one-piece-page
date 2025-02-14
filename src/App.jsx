@@ -1,4 +1,5 @@
 import Characters from "./components/Characters"
+import Fruits from "./components/Fruits"
 import Home from "./components/Home"
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div className='h-auto overflow-x-hidden'>
       <Home />
       <Characters />
+      <Fruits />
     </div>
   )
 }

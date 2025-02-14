@@ -1,7 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { div, image, title } from 'motion/react-client'
 import React, { useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react'
 
 const CharacterList = ({ charactersData }) => {
 

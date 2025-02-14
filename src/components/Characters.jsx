@@ -77,7 +77,7 @@ const Characters = () => {
 
   return (
     <div className="w-screen bg-[#1c130e] flex justify-center pb-4 pt-8">
-      <div className="w-[90%] h-[570px] bg-white rounded-3xl">
+      <div className="w-[90%] p-2 bg-white rounded-3xl">
         <CharacterList charactersData={charactersData} />
 
       </div>
