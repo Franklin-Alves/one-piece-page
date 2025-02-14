@@ -1,4 +1,5 @@
-import logo from "../assets/icons/jolly-roger.svg";
+import logo from "../assets/jolly-roger.svg";
+import posters from "/images/image.png";
 import { motion } from "motion/react";
 
 const Home = () => {
@@ -36,7 +37,7 @@ const Home = () => {
           </motion.div>
           <span className="border-2 border-[#c4b599] w-[50px] ml-4 mt-12"></span>
         </div>
-        <img src="../src/assets/images/image.png" alt="" className="w-[700px] h-[600px] rounded-tl-md rounded-bl-md"/>
+        <img src={posters} alt="" className="w-[700px] h-[600px] rounded-tl-md rounded-bl-md"/>
       </div>
 
     </div>

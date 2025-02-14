@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 
 
+
 const Fruits = () => {
 
     const [isClick, setIsClick] = useState(false)
@@ -19,7 +20,7 @@ const Fruits = () => {
     }, [isClick]) 
 
     return (
-        <div className="w-screen  bg-[#c4b394]">
+        <div className="w-screen bg-[#c4b394]">
             <div className='flex flex-col items-center p-16 gap-10'>
                 <div className='flex w-80 rounded-lg border-2 gap-2'>
                     <button>
@@ -28,7 +29,6 @@ const Fruits = () => {
                     <input className="bg-transparent w-72 border-l-2" />
                 </div>
                 <div className="flex flex-wrap gap-10">
-
                     <motion.div
                         className="flex justify-center items-center cursor-pointer"
                         initial={{width: "120px"}}
@@ -41,7 +41,7 @@ const Fruits = () => {
 
                     >
                         <div className={`flex flex-col justify-center items-center bg-white w-64 rounded-2xl p-4`}>
-                            <img className="w-32" src="../src/assets/images/fruits/gomu-gomu-no-mi.png" alt="" />
+                            <img className="w-32" src="/images/fruits/gomu-gomu-no-mi.png" alt="" />
                             
                             <motion.div
                                 className="p-2 border-t border-black"
@@ -58,7 +58,8 @@ const Fruits = () => {
                             </motion.div>
                         </div>
                     </motion.div>
-
+                    
+                    
                 </div>
             </div>
 
