@@ -1,65 +1,98 @@
 import { Search } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
-import { motion } from 'motion/react'
-
-
+import FruitsCard from './FruitsCard'
+import { useState } from 'react'
 
 const Fruits = () => {
 
-    const [isClick, setIsClick] = useState(false)
-    const [showContent, setShowContent] = useState(false)
-
-    useEffect(() => {
-        if (isClick) {
-            setTimeout(() => {setShowContent(true)}, 800)
-        }
-        else {
-           setShowContent(false)
+    const fruitsData = [
+        {
+            image: "/images/fruits/gomu-gomu-no-mi.png",
+            alt: "Gomu Gomu No Mi, fruta do Luffy",
+            title: "Gomu Gomu No Mi",
+            description: 'Uma Akuma no Mi do tipo Paramecia que transforma o usuário em um homem-borracha, concedendo-lhe um corpo altamente elástico. Essa habilidade permite esticar seus membros, resistir a impactos físicos e executar ataques poderosos. Originalmente atribuída a Monkey D. Luffy.',
+        },
+        {
+            image: "/images/fruits/ito-ito-no-mi.png",
+            alt: "Ito Ito No Mi, fruta do Doflamingo",
+            title: "Ito Ito No Mi",
+            description: 'Uma Akuma no Mi do tipo Paramecia que permite ao usuário criar e manipular fios extremamente resistentes e afiados. Esses fios podem ser usados para cortar, controlar pessoas como marionetes ou até suspender objetos no ar. Seu usuário mais famoso foi Donquixote Doflamingo.',
+        },
+        {
+            image: "/images/fruits/mera-mera-no-mi.png",
+            alt: "Mera Mera No Mi, fruta do Doflamingo",
+            title: "Mera Mera No Mi",
+            description: 'Uma Akuma no Mi do tipo Logia que permite ao usuário controlar, criar e se transformar em fogo. Essa habilidade concede ataques destrutivos, resistência a altas temperaturas e grande mobilidade aérea. Foi originalmente comida por Portgas D. Ace e, após sua morte, foi adquirida por Sabo.',
+        },
+        {
+            image: "/images/fruits/moku-moku-no-mi.png",
+            alt: "Moku Moku No Mi, fruta do Doflamingo",
+            title: "Moku Moku No Mi",
+            description: 'Uma Akuma no Mi do tipo Logia que dá ao usuário a capacidade de gerar, controlar e se transformar em fumaça. Seu portador pode envolver adversários em névoa e até tornar seu corpo intangível. O primeiro usuário conhecido foi Smoker, um Vice-Almirante da Marinha.',
+        },
+        {
+            image: "/images/fruits/gura-gura-no-mi.png",
+            alt: "Gura Gura No Mi, fruta do Barba Negra",
+            title: "Gura Gura No Mi",
+            description: 'Uma Akuma no Mi do tipo Paramecia considerada uma das mais poderosas, capaz de criar terremotos devastadores. Seu usuário pode gerar ondas sísmicas no solo, no ar e até no mar, causando destruição em larga escala. Era a fruta do Barba Branca e, posteriormente, Barba Negra.',
+        },
+        {
+            image: "/images/fruits/hana-hana-no-mi.png",
+            alt: "Hana Hana No Mi, fruta da Nico Robin",
+            title: "Hana Hana No Mi",
+            description: 'Uma Akuma no Mi do tipo Paramecia que permite ao usuário criar réplicas de partes do seu corpo em qualquer superfície, incluindo outras pessoas. Essa habilidade pode ser usada tanto para combate quanto para espionagem. Nico Robin é a portadora dessa fruta e a utiliza em seu estilo de luta único.',
+        },
+        {
+            image: "/images/fruits/hito-hito-no-mi.png",
+            alt: "Hito Hito No Mi, fruta da Nico Robin",
+            title: "Hito Hito No Mi",
+            description: 'Uma Akuma no Mi do tipo Zoan que concede ao usuário características humanas, incluindo inteligência avançada e a capacidade de falar. Foi comida por Tony Tony Chopper, permitindo que ele adquirisse formas híbridas entre rena e humano. Há variações dessa fruta que conferem poderes divinos ou mitológicos.',
+        },
+        {
+            image: "/images/fruits/inu-inu-no-mi.png",
+            alt: "Inu Inu No Mi, fruta do Jabra",
+            title: "Inu Inu No Mi",
+            description: 'Uma categoria de Akuma no Mi do tipo Zoan que transforma o usuário em um cão ou em uma forma híbrida. Existem diferentes modelos dessa fruta, como o Inu Inu no Mi: Modelo Lobo, usada por Jabra, e o Modelo Okuchi no Makami, usada por Yamato. Essas formas conferem força física e habilidades animais.',
+        },
+        {
+            image: "/images/fruits/sube-sube-no-mi.png",
+            alt: "Sube Sube No Mi, fruta do Jabra",
+            title: "Sube Sube No Mi",
+            description: 'Uma Akuma no Mi do tipo Paramecia que torna a pele do usuário extremamente lisa e escorregadia. Isso faz com que ataques físicos sejam desviados automaticamente e pode resultar em uma aparência mais jovem e atraente. A usuária mais conhecida foi Alvida.',
         }
         
-    }, [isClick]) 
+        
+
+    ]
+
+    const [search, setSearch] = useState("")
+
+    const fruitsFiltered = fruitsData.filter((fruta) => fruta.title.includes(search))
+    
+    console.log(fruitsFiltered)
 
     return (
         <div className="w-screen bg-[#c4b394]">
-            <div className='flex flex-col items-center p-16 gap-10'>
-                <div className='flex w-80 rounded-lg border-2 gap-2'>
-                    <button>
-                        <Search className='ml-2' size={20} color='#fff' />
-                    </button>
-                    <input className="bg-transparent w-72 border-l-2" />
+            <div className='flex flex-col items-center pt-16'>
+                <div className='flex w-80 rounded-lg border-2 border-[#1c130e] gap-2'>
+                    <Search className='ml-2' size={20} color='#1c130e' />
+                    <input 
+                        className="bg-transparent w-72 text-white border-l-2 border-[#1c130e]"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
                 </div>
-                <div className="flex flex-wrap gap-10">
-                    <motion.div
-                        className="flex justify-center items-center cursor-pointer"
-                        initial={{width: "120px"}}
-                        animate={isClick ? {width: "256px", height: "293px"} : {width: "120px"}}
-                        transition={{
-                            delay: 0.3,
-                            duration: 0.5,                           
-                        }}
-                        onClick={() => setIsClick(!isClick)}
+                <div className="w-max grid grid-cols-4 gap-x-10 gap-y-4 mt-8 self-center">
+                    {fruitsFiltered.slice(0,8).map((fruta, index) => (
+                        <FruitsCard
+                            key={index}
+                            image={fruta.image}
+                            alt={fruta.alt}
+                            title={fruta.title}
+                            description={fruta.description}
+                        />
+                    ))}
 
-                    >
-                        <div className={`flex flex-col justify-center items-center bg-white w-64 rounded-2xl p-4`}>
-                            <img className="w-32" src="/images/fruits/gomu-gomu-no-mi.png" alt="" />
-                            
-                            <motion.div
-                                className="p-2 border-t border-black"
-                                initial={{ display: "none", scale: 0 }}
-                                animate={ showContent ? { display: "block", scale: 1 } : {  }}
-                                transition={{
-                                    duration: 0.5,
-                                    display: isClick ? { type: "spring", visualDuration: 0.4, bounce: 0.8 } : {}
-                                }}
 
-                            >
-                                <h1 className="font-title font-bold text-xl">Gomu Gomu No Mi</h1>
-                                <p className="text-xs text-[#30251e] text-justify font-roboto">A Gomu Gomu no Mi, conhecida originalmente como Hito Hito no Mi, Modelo: Nika, é uma Akuma no Mi do tipo Zoan Mítica que permite ao usuário se transformar no lendário "Deus do Sol" Nika e ganhar seus atributos, notavelmente um corpo com 100% depropriedades da borracha</p>
-                            </motion.div>
-                        </div>
-                    </motion.div>
-                    
-                    
                 </div>
             </div>
 
