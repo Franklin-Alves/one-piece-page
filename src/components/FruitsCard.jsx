@@ -5,17 +5,17 @@ import { useEffect, useState } from 'react'
 const FruitsCard = ({ image, alt, title, description }) => {
     const [isClick, setIsClick] = useState(false)
     const [showContent, setShowContent] = useState(false)
-    
+
 
     useEffect(() => {
         if (isClick) {
-            setTimeout(() => {setShowContent(true)}, 800)
+            setTimeout(() => { setShowContent(true) }, 800)
         }
         else {
-           setShowContent(false)
+            setShowContent(false)
         }
-        
-    }, [isClick]) 
+
+    }, [isClick])
 
     return (
         <motion.div

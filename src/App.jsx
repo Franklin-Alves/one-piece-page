@@ -1,6 +1,7 @@
 import Characters from "./components/Characters"
 import Fruits from "./components/Fruits"
 import Home from "./components/Home"
+import NewsletterSection from "./components/NewsletterSection"
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Home />
       <Characters />
       <Fruits />
+      <NewsletterSection />
     </div>
   )
 }

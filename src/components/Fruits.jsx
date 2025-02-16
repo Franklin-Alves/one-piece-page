@@ -59,30 +59,26 @@ const Fruits = () => {
             title: "Sube Sube No Mi",
             description: 'Uma Akuma no Mi do tipo Paramecia que torna a pele do usuário extremamente lisa e escorregadia. Isso faz com que ataques físicos sejam desviados automaticamente e pode resultar em uma aparência mais jovem e atraente. A usuária mais conhecida foi Alvida.',
         }
-        
-        
 
     ]
 
     const [search, setSearch] = useState("")
 
     const fruitsFiltered = fruitsData.filter((fruta) => fruta.title.includes(search))
-    
-    console.log(fruitsFiltered)
 
     return (
-        <div className="w-screen bg-[#c4b394]">
-            <div className='flex flex-col items-center pt-16'>
+        <div className="w-screen bg-[#c4b394] p-20">
+            <div className='flex flex-col items-center'>
                 <div className='flex w-80 rounded-lg border-2 border-[#1c130e] gap-2'>
                     <Search className='ml-2' size={20} color='#1c130e' />
-                    <input 
+                    <input
                         className="bg-transparent w-72 text-white border-l-2 border-[#1c130e]"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
                 </div>
                 <div className="w-max grid grid-cols-4 gap-x-10 gap-y-4 mt-8 self-center">
-                    {fruitsFiltered.slice(0,8).map((fruta, index) => (
+                    {fruitsFiltered.slice(0, 8).map((fruta, index) => (
                         <FruitsCard
                             key={index}
                             image={fruta.image}
