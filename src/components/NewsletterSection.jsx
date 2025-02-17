@@ -10,9 +10,9 @@ const NewsletterSection = () => {
           <p className="text-center w-[400px] text-xl">Em breve: Cadastre-se para receber nossas novidades! Estamos trabalhando para oferecer a melhor experiência.</p>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-5">
-          <input type="text" className="p-2 rounded-full w-60" placeholder="Nome completo" />
-          <input type="email" className="p-2 rounded-full w-60" placeholder="E-mail" />
+        <div className="flex flex-col justify-center items-center mb-10 gap-5">
+          <input type="text" className="p-2 rounded-full w-60 text-sm" placeholder="Nome completo" />
+          <input type="email" className="p-2 rounded-full w-60 text-sm" placeholder="E-mail" />
           <button className="w-40 text-white bg-green-500 p-2 rounded-full  font-bold">Inscreva-se</button>
         </div>
 
