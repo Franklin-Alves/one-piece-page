@@ -64,7 +64,8 @@ const Fruits = () => {
 
     const [search, setSearch] = useState("")
 
-    const fruitsFiltered = fruitsData.filter((fruta) => fruta.title.includes(search))
+    const lowerSearch = search.toLowerCase()
+    const fruitsFiltered = fruitsData.filter((fruta) => fruta.title.toLocaleLowerCase().includes(lowerSearch))
 
     return (
         <div className="w-screen bg-[#c4b394] p-20">
