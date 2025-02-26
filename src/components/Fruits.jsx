@@ -68,14 +68,16 @@ const Fruits = () => {
     const fruitsFiltered = fruitsData.filter((fruta) => fruta.title.toLocaleLowerCase().includes(lowerSearch))
 
     return (
-        <div className="w-screen bg-[#c4b394] p-20">
+        <div id="fruits" className="w-screen h-[750px] bg-[#c4b394] pb-20">
             <div className='flex flex-col items-center'>
+                <h1 className="font-title text-[#062439] text-6xl p-10 font-bold">Frutas</h1>
                 <div className='flex w-80 rounded-lg border-2 border-[#1c130e] gap-2'>
                     <Search className='ml-2' size={20} color='#1c130e' />
                     <input
-                        className="bg-transparent w-72 text-white border-l-2 border-[#1c130e]"
+                        className="bg-transparent w-72 text-white border-l-2 border-[#1c130e] placeholder-white"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
+                        placeholder="Buscar fruta..."
                     />
                 </div>
                 <div className="w-max grid grid-cols-4 gap-x-10 gap-y-4 mt-8 self-center">

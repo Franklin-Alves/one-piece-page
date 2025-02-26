@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const Home = () => {
   return (
-    <div className="w-screen bg-[#1c130e]">
+    <div id="home" className="w-screen bg-[#1c130e]">
       <div className="flex justify-between items-center">
 
         <div className="flex flex-col pl-12">
@@ -12,7 +12,7 @@ const Home = () => {
             src={logo}
             className="w-24 absolute top-10"
             initial={{ opacity: 0, translateY: -100 }}
-            animate={{ opacity: 1, translateY: 0 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
             transition={{
               type: "spring",
               visualDuration: 0.8,
@@ -24,10 +24,9 @@ const Home = () => {
           <motion.div
             className="text-white font-roboto mt-52 pl-4"
             initial={{ opacity: 0, translateY: -100 }}
-            animate={{ opacity: 1, translateY: 0 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
             transition={{
               type: "spring",
-              delay: 0.9,
               visualDuration: 0.8,
               bounce: 0.6
             }}
