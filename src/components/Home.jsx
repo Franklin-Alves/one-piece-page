@@ -1,5 +1,5 @@
 import logo from "../assets/jolly-roger.svg";
-import posters from "/images/posters.png";
+import posters from "/images/posters.webp";
 import { motion } from "motion/react";
 
 const Home = () => {
