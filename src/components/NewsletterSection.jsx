@@ -29,7 +29,7 @@ const NewsletterSection = () => {
   }, [])
 
   return (
-    <div id='newsletter' className="w-screen flex items-center h-[680px] object-cover bg-cover bg-[url(/images/background.png)]">
+    <div id='newsletter' className="w-screen flex items-center h-[680px] object-cover bg-cover bg-[url(/images/background.webp)]">
       <motion.div
 
         className="flex flex-col justify-center items-center w-[650px] h-[450px] ml-12  bg-black bg-opacity-70"
