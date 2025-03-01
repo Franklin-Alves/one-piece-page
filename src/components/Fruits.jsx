@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react'
 import FruitsCard from './FruitsCard'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Fruits = () => {
 
@@ -67,8 +67,17 @@ const Fruits = () => {
     const lowerSearch = search.toLowerCase()
     const fruitsFiltered = fruitsData.filter((fruta) => fruta.title.toLocaleLowerCase().includes(lowerSearch))
 
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth)
+
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
+
     return (
-        <div id="fruits" className="w-screen h-[750px] bg-[#c4b394] pb-20">
+        <div id="fruits" className="w-screen h-[750px] max-sm:h-auto bg-[#c4b394] pb-20">
             <div className='flex flex-col items-center'>
                 <h1 className="font-title text-[#062439] text-6xl p-10 font-bold">Frutas</h1>
                 <div className='flex w-80 rounded-lg border-2 border-[#1c130e] gap-2'>
@@ -80,8 +89,8 @@ const Fruits = () => {
                         placeholder="Buscar fruta..."
                     />
                 </div>
-                <div className="w-max grid grid-cols-4 gap-x-10 gap-y-4 mt-8 self-center">
-                    {fruitsFiltered.slice(0, 8).map((fruta, index) => (
+                <div className="w-max max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center grid grid-cols-4 gap-x-10 gap-y-4 mt-8 self-center">
+                    {fruitsFiltered.slice(0, screenWidth > 640 ? 8 : 4).map((fruta, index) => (
                         <FruitsCard
                             key={index}
                             image={fruta.image}
@@ -90,8 +99,6 @@ const Fruits = () => {
                             description={fruta.description}
                         />
                     ))}
-
-
                 </div>
             </div>
 

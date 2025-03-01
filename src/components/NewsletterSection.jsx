@@ -29,25 +29,27 @@ const NewsletterSection = () => {
   }, [])
 
   return (
-    <div id='newsletter' className="w-screen flex items-center h-[680px] object-cover bg-cover bg-[url(/images/background.webp)]">
+    <div 
+      id='newsletter' 
+      className="w-screen flex max-sm:justify-center items-center h-[680px] max-sm:h-[800px] object-cover bg-cover bg-[url(/images/background.webp)] max-sm:bg-[url(/images/background-mobile.jpg)]"
+    >
       <motion.div
-
-        className="flex flex-col justify-center items-center w-[650px] h-[450px] ml-12  bg-black bg-opacity-70"
+        className="flex flex-col justify-center items-center w-[650px] max-sm:w-[300px] h-[450px] ml-12 max-sm:ml-0  bg-black bg-opacity-70"
         initial={{ opacity: 0, scale: 0 }}
         animate={!isAnimitionEnd ? { opacity: 1, scale: 1, rotate: 360 } : { opacity: 0, scale: 0 }}
         transition={{ duration: 1 }}
         viewport={{ amount: 0.5, once: true }}
       >
 
-        <div className="mb-5 text-white">
-          <h1 className="text-center text-5xl font-bold p-5">Newsletter</h1>
-          <p className="text-center w-[400px] text-xl">Em breve: Cadastre-se para receber nossas novidades! Estamos trabalhando para oferecer a melhor experiência.</p>
+        <div className="mb-5 text-white max-sm:flex max-sm:flex-col max-sm:items-center">
+          <h1 className="text-center text-5xl max-sm:text-4xl font-bold p-5">Newsletter</h1>
+          <p className="text-center w-[400px] max-sm:w-[250px] text-xl max-sm:text-xs">Em breve: Cadastre-se para receber nossas novidades! Estamos trabalhando para oferecer a melhor experiência.</p>
         </div>
 
         <div className="flex flex-col justify-center items-center mb-10 gap-5">
-          <input type="text" className="p-2 rounded-full w-60 text-sm" placeholder="Nome completo" />
-          <input type="email" className="p-2 rounded-full w-60 text-sm" placeholder="E-mail" />
-          <button className="w-40 text-white bg-green-500 p-2 rounded-full  font-bold">Inscreva-se</button>
+          <input type="text" className="p-2 max-sm:p-1 rounded-full w-60 max-sm:w-40 text-xs" placeholder="Nome completo" />
+          <input type="email" className="p-2 max-sm:p-1 rounded-full w-60 max-sm:w-40 text-xs" placeholder="E-mail" />
+          <button className="w-40 max-sm:w-32 text-white max-sm:text-sm bg-green-500 p-2 max-sm:p-1 rounded-full  font-bold">Inscreva-se</button>
         </div>
 
       </motion.div>

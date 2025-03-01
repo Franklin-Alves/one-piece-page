@@ -29,7 +29,7 @@ const Characters = () => {
       image: "/images/characters/nami.webp",
       name: "Nami",
       title: "⁠Todo mundo é fraco quando hesita.",
-      description: "A navegadora dos Chapéus de Palha, é uma estrategista brilhante e especialista em meteorologia e cartografia. Embora tenha começado como uma ladra",
+      description: "A navegadora dos Chapéus de Palha, é uma estrategista brilhante e especialista em meteorologia e cartografia. Embora tenha começado como uma ladra.",
     },
     {
       id: 5,
@@ -76,8 +76,8 @@ const Characters = () => {
   ]
 
   return (
-    <div id="characters" className="w-screen bg-[#1c130e] flex justify-center p-8">
-      <div className="w-[90%] p-2 bg-white rounded-3xl">
+    <div id="characters" className="w-screen bg-[#1c130e] h-[650px] max-sm:h-[800px] flex justify-center max-sm:items-center p-8">
+      <div className="w-[90%] max-sm:h-[550px] p-2 bg-white rounded-3xl">
         <CharacterList charactersData={charactersData} />
 
       </div>
