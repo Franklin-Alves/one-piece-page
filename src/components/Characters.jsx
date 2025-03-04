@@ -79,7 +79,6 @@ const Characters = () => {
     <div id="characters" className="w-screen bg-[#1c130e] h-[650px] max-lg:h-[800px] flex justify-center max-lg:items-center p-8">
       <div className="w-[90%] max-lg:w-[100%] max-lg:h-[500px] max-sm:h-[550px] p-2 bg-white rounded-3xl">
         <CharacterList charactersData={charactersData} />
-
       </div>
     </div>
   )

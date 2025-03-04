@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from "motion/react"
 
 const NewsletterSection = () => {
@@ -10,7 +10,7 @@ const NewsletterSection = () => {
 
       let current = "newsletter"
       let section = document.getElementById(current)
-      
+
       if (section) {
         let rect = section.getBoundingClientRect()
         if (rect.top <= 360 && rect.bottom >= 100) {
@@ -29,8 +29,8 @@ const NewsletterSection = () => {
   }, [])
 
   return (
-    <div 
-      id='newsletter' 
+    <div
+      id='newsletter'
       className="w-screen flex max-lg:justify-center items-center h-[680px] max-sm:h-[800px] object-cover bg-cover bg-[url(/images/background.webp)] max-sm:bg-[url(/images/background-mobile.webp)]"
     >
       <motion.div

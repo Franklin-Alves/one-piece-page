@@ -1,11 +1,9 @@
 import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
 
-
 const FruitsCard = ({ image, alt, title, description }) => {
     const [isClick, setIsClick] = useState(false)
     const [showContent, setShowContent] = useState(false)
-
 
     useEffect(() => {
         if (isClick) {

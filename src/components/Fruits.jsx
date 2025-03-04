@@ -68,7 +68,7 @@ const Fruits = () => {
     const fruitsFiltered = fruitsData.filter((fruta) => fruta.title.toLocaleLowerCase().includes(lowerSearch))
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-    
+
     useEffect(() => {
         const handleResize = () => setScreenWidth(window.innerWidth)
 

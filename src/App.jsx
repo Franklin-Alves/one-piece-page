@@ -15,8 +15,6 @@ const App = () => {
 
     window.scrollTo(0, 0);
   }, []);
-  
-
 
   return (
     <div className='h-auto overflow-x-hidden scroll-smooth'>

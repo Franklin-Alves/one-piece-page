@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 
 const CharacterList = ({ charactersData }) => {
@@ -43,10 +43,10 @@ const CharacterList = ({ charactersData }) => {
 
         <div className="flex justify-center items-center">
           <motion.button name="voltar" onClick={() => prevCharacter(characterDetails.id)} className="absolute left-20 max-lg:left-4 max-sm:left-8">
-            <ChevronLeft color="#30251e" size={74} strokeWidth={1}/>
+            <ChevronLeft color="#30251e" size={74} strokeWidth={1} />
           </motion.button >
           <motion.button name="avançar" onClick={() => nextCharacter(characterDetails.id)} className="absolute right-16 max-lg:right-4 max-sm:right-7">
-            <ChevronRight color="#30251e" size={74} strokeWidth={1}/>
+            <ChevronRight color="#30251e" size={74} strokeWidth={1} />
           </motion.button>
         </div>
 

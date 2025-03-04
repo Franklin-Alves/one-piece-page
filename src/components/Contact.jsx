@@ -1,6 +1,5 @@
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 import logo from "/images/logo.webp"
-import React from 'react'
 
 const Contact = () => {
 
@@ -8,10 +7,10 @@ const Contact = () => {
 
     const links = [
         { href: "#home", title: "Home" },
-        { href: "#characters", title: "Personagens"},
-        { href: "#fruits", title: "Frutas"},
-        { href: "#newsletter", title: "Newsletter"},
-        { href: "#contact", title: "Contato"},
+        { href: "#characters", title: "Personagens" },
+        { href: "#fruits", title: "Frutas" },
+        { href: "#newsletter", title: "Newsletter" },
+        { href: "#contact", title: "Contato" },
     ]
 
     return (
@@ -22,8 +21,8 @@ const Contact = () => {
                 <nav className="w-[800px] max-sm:hidden">
                     <ul className="flex justify-center gap-8 p-20 pb-24  border-b-2">
                         {links.map((link, index) => (
-                            <li 
-                                key={index} 
+                            <li
+                                key={index}
                                 className="font-roboto font-light text-2xl hover:border-b-2 hover:text-[#C4B394] hover:font-bold hover:border-[#C4B394]"
                             >
                                 <a href={link.href}>{link.title}</a>

@@ -26,7 +26,6 @@ const Home = () => {
             <MobileMenu />
           </div>
 
-
           <motion.div
             className="text-white max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center font-roboto max-lg:mt-20 mt-52 max-lg:pl-0 pl-4"
             initial={{ opacity: 0, translateY: -100 }}
