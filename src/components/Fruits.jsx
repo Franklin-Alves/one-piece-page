@@ -77,7 +77,7 @@ const Fruits = () => {
     }, [])
 
     return (
-        <div id="fruits" className="w-screen h-[750px] max-sm:h-auto bg-[#c4b394] pb-20">
+        <div id="fruits" className="w-screen h-[750px] max-[1025px]:h-auto bg-[#c4b394] pb-20">
             <div className='flex flex-col items-center'>
                 <h1 className="font-title text-[#062439] text-6xl p-10 font-bold">Frutas</h1>
                 <div className='flex w-80 rounded-lg border-2 border-[#1c130e] gap-2'>
@@ -89,8 +89,8 @@ const Fruits = () => {
                         placeholder="Buscar fruta..."
                     />
                 </div>
-                <div className="w-max max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center grid grid-cols-4 gap-x-10 gap-y-4 mt-8 self-center">
-                    {fruitsFiltered.slice(0, screenWidth > 640 ? 8 : 4).map((fruta, index) => (
+                <div className="w-max max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center grid grid-cols-4 max-lg:grid-cols-2 max-[1025px]:grid-cols-3  gap-x-10 gap-y-4 mt-8 self-center">
+                    {fruitsFiltered.slice(0, screenWidth > 1024 ? 8 : screenWidth <= 640 ? 4 : 6).map((fruta, index) => (
                         <FruitsCard
                             key={index}
                             image={fruta.image}

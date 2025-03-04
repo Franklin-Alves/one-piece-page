@@ -31,10 +31,10 @@ const NewsletterSection = () => {
   return (
     <div 
       id='newsletter' 
-      className="w-screen flex max-sm:justify-center items-center h-[680px] max-sm:h-[800px] object-cover bg-cover bg-[url(/images/background.webp)] max-sm:bg-[url(/images/background-mobile.jpg)]"
+      className="w-screen flex max-lg:justify-center items-center h-[680px] max-sm:h-[800px] object-cover bg-cover bg-[url(/images/background.webp)] max-sm:bg-[url(/images/background-mobile.webp)]"
     >
       <motion.div
-        className="flex flex-col justify-center items-center w-[650px] max-sm:w-[300px] h-[450px] ml-12 max-sm:ml-0  bg-black bg-opacity-70"
+        className="flex flex-col justify-center items-center w-[650px] max-sm:w-[300px] h-[450px] ml-12 max-lg:ml-0  bg-black bg-opacity-70"
         initial={{ opacity: 0, scale: 0 }}
         animate={!isAnimitionEnd ? { opacity: 1, scale: 1, rotate: 360 } : { opacity: 0, scale: 0 }}
         transition={{ duration: 1 }}

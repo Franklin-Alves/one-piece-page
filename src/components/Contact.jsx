@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
-import logo from "/images/logo.png"
+import logo from "/images/logo.webp"
 import React from 'react'
 
 const Contact = () => {
@@ -37,7 +37,7 @@ const Contact = () => {
                 <ul className="flex gap-8 pt-6 max-sm:pt-0 pb-12 max-sm:pb-28">
                     {socialIcons.map((icon, index) => (
                         <li key={index} className="border-2 p-2 rounded-full hover:bg-[#C4B394]">
-                            <a href="#">{icon}</a>
+                            <a href="#contact">{icon}</a>
                         </li>
                     ))}
                 </ul>
