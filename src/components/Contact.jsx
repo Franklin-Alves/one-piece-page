@@ -22,7 +22,7 @@ const Contact = () => {
         <div id="contact" className="w-screen h-[650px] max-sm:h-[800px] bg-[#1c130e]">
             <div className="flex flex-col justify-center items-center text-white pt-20 max-sm:pt-28">
                 <h1 className="text-5xl max-sm:text-4xl font-serif font-semibold pb-8 text-center max-sm:pb-10">The Pirate's Log</h1>
-                <img className="hidden max-sm:block w-40 " src={logo} alt="" />
+                <img className="hidden max-sm:block w-40 " width={160} height={160} src={logo} alt="" />
                 <nav className="w-[800px] max-sm:hidden">
                     <ul className="flex justify-center gap-8 p-20 pb-24  border-b-2">
                         {links.map((link, index) => (

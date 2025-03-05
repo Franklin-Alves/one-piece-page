@@ -28,7 +28,7 @@ const FruitsCard = ({ image, alt, title, description }) => {
 
         >
             <div className={`flex flex-col  justify-center items-center bg-white w-64 rounded-2xl p-4`}>
-                <img className="h-[60px]" src={image} alt={alt} />
+                <img className=" w-auto h-[60px]"  width={60} height={60} src={image} alt={alt} />
 
                 <motion.div
                     className="p-2 border-t w-[208px] h-[189px] border-black  text-ellipsis"

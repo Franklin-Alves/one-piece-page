@@ -13,6 +13,8 @@ const Home = () => {
             <motion.img
               src={jolly}
               alt="Jolly Roger"
+              width={96}
+              height={96}
               className="w-24 max-sm:w-20 max-lg:relative absolute top-10"
               initial={{ opacity: 0, translateY: -100 }}
               whileInView={{ opacity: 1, translateY: 0 }}
@@ -41,7 +43,13 @@ const Home = () => {
           </motion.div>
           <span className="border-2 border-[#c4b599] w-[50px] ml-4 mt-12 max-lg:mt-4 max-lg:ml-0 max-lg:mb-8"></span>
         </div>
-        <img src={posters} alt="" className="w-[700px] h-[600px] max-[1025px]:w-[600px] max-lg:w-screen max-lg:h-auto max-lg:object-cover rounded-tl-md rounded-bl-md" />
+        <img 
+          src={posters} 
+          width={650}
+          height={600}
+          alt="Cartazes de procurado"
+          loading="lazy" 
+          className="w-[650px] h-[600px] max-[1025px]:w-[600px] max-lg:w-screen max-lg:h-auto max-lg:object-cover rounded-tl-md rounded-bl-md" />
       </div>
 
     </div>
