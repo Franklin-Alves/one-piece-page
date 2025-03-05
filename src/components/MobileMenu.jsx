@@ -22,7 +22,7 @@ const MobileMenu = () => {
     return (
         <div className="absolute right-2 top-2 hidden max-lg:block">
             <button onClick={() => setIsOpen(!isOpen)}>
-                {!isOpen ? <Menu color="white" size={40} /> : ""}
+                {!isOpen ? <Menu color="white" aria-label="Menu mobile" size={40} /> : ""}
             </button>
 
             <motion.div
@@ -33,7 +33,7 @@ const MobileMenu = () => {
             >
                 <div className="flex flex-col">
                     <button className="" onClick={() => setIsOpen(!isOpen)}>
-                        <X color="#1c130e" size={40} />
+                        <X color="#1c130e" aria-label="Fechar menu" size={40} />
                     </button>
 
                     <nav className="flex flex-col text-end justify-end">
