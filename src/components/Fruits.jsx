@@ -79,7 +79,7 @@ const Fruits = () => {
     return (
         <div id="fruits" className="w-screen h-[750px] max-[1025px]:h-auto bg-[#c4b394] pb-20">
             <div className='flex flex-col items-center'>
-                <h1 className="font-title text-[#062439] text-6xl p-10 font-bold">Frutas</h1>
+                <h1 className="font-serif text-[#062439] text-6xl p-10 font-bold">Frutas</h1>
                 <div className='flex w-80 rounded-lg border-2 border-[#1c130e] gap-2'>
                     <Search className='ml-2' size={20} color='#1c130e' />
                     <input

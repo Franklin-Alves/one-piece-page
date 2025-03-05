@@ -41,7 +41,7 @@ const MobileMenu = () => {
                             <a
                                 key={i}
                                 onClick={() => setIsOpen(false)}
-                                className="p-4 bg-transparent font-semibold font-roboto max-sm:text-lg max-[1025px]:text-xl text-[#1c130e] hover:bg-[#8B4513] hover:text-white"
+                                className="p-4 bg-transparent font-bold font-sans max-sm:text-lg max-[1025px]:text-xl text-[#1c130e] hover:bg-[#8B4513] hover:text-white"
                                 href={link.href}
                             >
                                 {link.title}

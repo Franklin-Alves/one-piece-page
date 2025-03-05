@@ -33,7 +33,7 @@ const CharacterList = ({ charactersData }) => {
             <img src={characterDetails.image} alt="" className="w-[300px] max-lg:w-[230px] max-sm:max-w-[150px] rounded-xl" />
 
             <div className="w-1/2 text-[#062439] flex flex-col justify-center items-center">
-              <h1 className="text-8xl max-lg:text-6xl max-sm:text-3xl font-title font-bold">{characterDetails.name}</h1>
+              <h1 className="text-7xl max-lg:text-6xl max-sm:text-3xl font-serif font-bold">{characterDetails.name}</h1>
               <span className="space-x-6 border-2 border-[#c4b599] w-[50px] mt-4"></span>
               <h3 className="underline max-w-[300px] max-sm:w-[200px] font-serif text-2xl max-lg:text-lg max-sm:text-sm text-center font-bold p-4">"{characterDetails.title}"</h3>
               <p className="max-w-[300px] max-lg:max-w-[270px] font-serif text-justify max-sm:text-xs text-sm">{characterDetails.description}</p>

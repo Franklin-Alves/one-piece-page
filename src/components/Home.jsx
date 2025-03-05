@@ -29,7 +29,7 @@ const Home = () => {
           </div>
 
           <motion.div
-            className="text-white max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center font-roboto max-lg:mt-20 mt-52 max-lg:pl-0 pl-4"
+            className="text-white max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center font-sans max-lg:mt-20 mt-52 max-lg:pl-0 pl-4"
             initial={{ opacity: 0, translateY: -100 }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{
@@ -38,7 +38,7 @@ const Home = () => {
               bounce: 0.6
             }}
           >
-            <h1 className="text-7xl max-[1025px]:text-5xl max-sm:text-4xl underline leading-tight max-lg:leading-snug max-lg:text-center">Seja <br />Bem-vindo!</h1>
+            <h1 className="text-6xl max-[1025px]:text-5xl max-sm:text-4xl underline leading-tight max-lg:leading-snug max-lg:text-center">Seja <br />Bem-vindo!</h1>
             <p className="pt-8 text-[#c4b394] text-lg max-lg:text-center">Vamos embarcar nessa aventura e <br />explorar esse mundo fantástico!</p>
           </motion.div>
           <span className="border-2 border-[#c4b599] w-[50px] ml-4 mt-12 max-lg:mt-4 max-lg:ml-0 max-lg:mb-8"></span>

@@ -28,7 +28,7 @@ const Contact = () => {
                         {links.map((link, index) => (
                             <li
                                 key={index}
-                                className="font-roboto font-light text-2xl hover:border-b-2 hover:text-[#C4B394] hover:font-bold hover:border-[#C4B394]"
+                                className="font-serif font-light text-2xl hover:border-b-2 hover:text-[#C4B394] hover:font-bold hover:border-[#C4B394]"
                             >
                                 <a href={link.href}>{link.title}</a>
                             </li>
@@ -45,7 +45,7 @@ const Contact = () => {
                         </li>
                     ))}
                 </ul>
-                <p className="font-roboto font-semibold text-center max-sm:text-xs">The Pirate's Log &copy; 2024 — Todos os direitos reservados</p>
+                <p className="font-sans font-semibold text-center max-sm:text-xs">The Pirate's Log &copy; 2024 — Todos os direitos reservados</p>
             </div>
         </div>
     )

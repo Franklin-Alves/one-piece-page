@@ -40,8 +40,8 @@ const FruitsCard = ({ image, alt, title, description }) => {
                     }}
 
                 >
-                    <h1 className="font-title font-bold text-xl text-center">{title}</h1>
-                    <p className="text-xs text-wrap break-words text-[#30251e] text-justify font-roboto">{description}</p>
+                    <h1 className="font-sans font-bold text-xl text-center">{title}</h1>
+                    <p className="text-xs text-wrap break-words text-[#30251e] text-justify font-serif">{description}</p>
                 </motion.div>
             </div>
         </motion.div>
