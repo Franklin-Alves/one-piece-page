@@ -49,7 +49,7 @@ const NewsletterSection = () => {
         <div className="flex flex-col justify-center items-center mb-10 gap-5">
           <input type="text" className="p-2 max-sm:p-1 rounded-full w-60 max-sm:w-40 text-xs" placeholder="Nome completo" />
           <input type="email" className="p-2 max-sm:p-1 rounded-full w-60 max-sm:w-40 text-xs" placeholder="E-mail" />
-          <button className="w-40 max-sm:w-32 text-white max-sm:text-sm bg-green-500 p-2 max-sm:p-1 rounded-full  font-bold">Inscreva-se</button>
+          <button className="w-40 max-sm:w-32 text-white max-sm:text-sm bg-green-700 p-2 max-sm:p-1 rounded-full  font-bold">Inscreva-se</button>
         </div>
 
       </motion.div>

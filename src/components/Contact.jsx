@@ -3,7 +3,12 @@ import logo from "/images/logo.webp"
 
 const Contact = () => {
 
-    const socialIcons = [<Facebook />, <Instagram />, <Youtube />, <Twitter />]
+    const socialIcons = [
+        <Facebook aria-label="Ir para perfil no Facebook" />, 
+        <Instagram aria-label="Ir para perfil no Instagram" />, 
+        <Youtube aria-label="Ir para perfil no Youtube" />,
+        <Twitter aria-label="Ir para perfil no Twitter" />
+    ]
 
     const links = [
         { href: "#home", title: "Home" },

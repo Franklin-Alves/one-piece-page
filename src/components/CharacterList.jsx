@@ -42,11 +42,11 @@ const CharacterList = ({ charactersData }) => {
         </AnimatePresence>
 
         <div className="flex justify-center items-center">
-          <motion.button name="voltar" onClick={() => prevCharacter(characterDetails.id)} className="absolute left-20 max-lg:left-4 max-sm:left-8">
-            <ChevronLeft color="#30251e" size={74} strokeWidth={1} />
+          <motion.button onClick={() => prevCharacter(characterDetails.id)} className="absolute left-20 max-lg:left-4 max-sm:left-8">
+            <ChevronLeft color="#30251e" size={74} strokeWidth={1} aria-label="Ver personagem anterior" />
           </motion.button >
-          <motion.button name="avançar" onClick={() => nextCharacter(characterDetails.id)} className="absolute right-16 max-lg:right-4 max-sm:right-7">
-            <ChevronRight color="#30251e" size={74} strokeWidth={1} />
+          <motion.button onClick={() => nextCharacter(characterDetails.id)} className="absolute right-16 max-lg:right-4 max-sm:right-7">
+            <ChevronRight color="#30251e" size={74} strokeWidth={1} aria-label="Ver próximo personagem" />
           </motion.button>
         </div>
 
